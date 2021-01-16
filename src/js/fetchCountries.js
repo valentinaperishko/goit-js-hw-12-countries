@@ -4,7 +4,7 @@ export default function fetchCountries(searchQuery) {
       if (response.ok) {
         return response.json();
       } else {
-        throw new Error("error fetching data");
+        throw new Error("Error fetching data");
       }
     },
   );

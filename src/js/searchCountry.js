@@ -29,9 +29,7 @@ function onSearch(e) {
       } else renderCountryCard(data);
     })
     .catch((err) => {
-      if (err === 404) {
-        error("No country found!");
-      } else error("Invalid name entered");
+      error("No country found!");
     });
 }
 
