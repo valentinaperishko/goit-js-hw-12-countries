@@ -1,6 +1,8 @@
 import debounce from "lodash.debounce";
 import getRefs from "./refs.js";
-import errorNotify from "./error.js";
+import '@pnotify/core/dist/PNotify.css';
+import "@pnotify/core/dist/BrightTheme.css";
+import { error } from '@pnotify/core';
 import fetchCountries from "./fetchCountries.js";
 import countryCardTpl from "../templates/countryCardTpl.hbs";
 import countriesList from "../templates/countriesList.hbs";
@@ -21,15 +23,16 @@ function onSearch(e) {
     .then((data) => {
       refs.articlesContainer.innerHTML = "";
       if (data.length > 10) {
-        return errorNotify("Be more specific on your search!");
+        return error("Be more specific on your search!");
       } else if (data.length > 1 && data.length <= 10) {
         renderCountriesList(data);
       } else renderCountryCard(data);
     })
     .catch((err) => {
       if (err === 404) {
-        errorNotify("No country found!");
-      } else errorNotify("Try again later!");
+        error("No country found!");
+      }
+      else error("Try again later!");
     });
 }
 
