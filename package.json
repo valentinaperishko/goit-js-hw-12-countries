@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+// тут вставить url репозитория на гите"
+    "url": "git+https://github.com/valentinaperishko/goit-js-hw-12-countries"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "// тут вставить url репозитория на гите"
+    "url": "https://github.com/valentinaperishko/goit-js-hw-12-countries"
   },
-  "homepage": "// тут вставить url GitHub Pages после команды npm run deploy",
+  "homepage": "https://valentinaperishko.github.io/goit-js-hw-12-countries/",
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
