@@ -1,11 +1,7 @@
-export default function fetchCountries(name) {
-    return fetch(`https://restcountries.eu/rest/v2/name/${name}`)
-      .then(response => {
-        return response.json();
-      })
-      .catch(error => console.log(error));
+export default function fetchCountries(searchQuery) {
+  return fetch(`https://restcountries.eu/rest/v2/name/${searchQuery}`)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => data);
 }
-  
-  
-
-
