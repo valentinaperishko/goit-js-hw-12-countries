@@ -1,8 +1,8 @@
 import debounce from "lodash.debounce";
 import getRefs from "./refs.js";
-import '@pnotify/core/dist/PNotify.css';
+import "@pnotify/core/dist/PNotify.css";
 import "@pnotify/core/dist/BrightTheme.css";
-import { error } from '@pnotify/core';
+import { error } from "@pnotify/core";
 import fetchCountries from "./fetchCountries.js";
 import countryCardTpl from "../templates/countryCardTpl.hbs";
 import countriesList from "../templates/countriesList.hbs";
@@ -31,8 +31,7 @@ function onSearch(e) {
     .catch((err) => {
       if (err === 404) {
         error("No country found!");
-      }
-      else error("Try again later!");
+      } else error("Invalid name entered");
     });
 }
 
