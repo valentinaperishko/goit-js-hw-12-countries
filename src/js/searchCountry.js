@@ -14,6 +14,7 @@ function onSearch(e) {
   e.preventDefault();
 
   const searchQuery = e.target.value;
+  refs.articlesContainer.innerHTML = "";
 
   if (!searchQuery) {
     return;
@@ -21,7 +22,6 @@ function onSearch(e) {
 
   fetchCountries(searchQuery)
     .then((data) => {
-      refs.articlesContainer.innerHTML = "";
       if (data.length > 10) {
         return error("Be more specific on your search!");
       } else if (data.length > 1 && data.length <= 10) {
